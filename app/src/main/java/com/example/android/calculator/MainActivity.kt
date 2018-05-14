@@ -3,6 +3,7 @@ package com.example.android.calculator
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +13,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onNumberEvent(view:View){
+        val buSelect = view as Button
+        val buClickValue:String = "0"
+        when(buSelect.id){
+            bu0.id -> {
 
+            }
+        }
     }
 }
