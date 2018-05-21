@@ -8,15 +8,14 @@
     android:padding="0dp"
     android:background="@color/gray">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:text="0"
         android:ems="10"
         android:id="@+id/etDisplayNumbers"
         android:layout_weight="1"
-        android:gravity="right"
+        android:gravity="end"
         android:layout_marginTop="0dp"
         android:paddingTop="10pt"
         tools:background="@color/gray"
@@ -24,6 +23,7 @@
         android:textColor="@android:color/white" />
 
     <TableLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0">
@@ -40,7 +40,8 @@
                 android:id="@+id/btnClear"
                 android:background="@color/whiteback"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onOperationClear"/>
 
             <Button
                 android:text="+/-"
@@ -54,14 +55,14 @@
             />
 
             <Button
-                android:text="%"
+                android:text=""
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btnPercentage"
                 android:background="@color/whiteback"
                 android:layout_weight="1"
-                android:onClick="onNumberEvent" />
+                android:enabled="false"/>
             />
 
             <Button
@@ -73,7 +74,7 @@
                 android:background="@color/buOperation"
                 android:textColor="@android:color/white"
                 android:layout_weight="1"
-                android:onClick="onNumberEvent" />
+                android:onClick="onOperationEvent"/>
             />
         </TableRow>
 
@@ -124,7 +125,7 @@
                 android:background="@color/buOperation"
                 android:textColor="@android:color/white"
                 android:layout_weight="1"
-                android:onClick="onNumberEvent" />
+                android:onClick="onOperationEvent" />
             />
         </TableRow>
 
@@ -174,7 +175,8 @@
                 android:id="@+id/btnMinus"
                 android:background="@color/buOperation"
                 android:textColor="@android:color/white"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="onOperationEvent"/>
         </TableRow>
 
         <TableRow
@@ -224,7 +226,7 @@
                 android:background="@color/buOperation"
                 android:textColor="@android:color/white"
                 android:layout_weight="1"
-                android:onClick="onNumberEvent" />
+                android:onClick="onOperationEvent" />
             />
         </TableRow>
     </TableLayout>
@@ -248,7 +250,7 @@
         <Button
             android:text="."
             android:textSize="18sp"
-            android:layout_width="43pt"
+            android:layout_width="45pt"
             android:layout_height="40pt"
             android:id="@+id/btnDot"
             android:layout_weight="1"
@@ -264,6 +266,7 @@
             android:id="@+id/btnEquals"
             android:layout_weight="1"
             android:background="@color/buOperation"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:onClick="OnGetResult"/>
     </LinearLayout>
 </LinearLayout>
